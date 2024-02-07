@@ -1,0 +1,20 @@
+
+.card-deck {
+  margin-top: 56px;
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1500px; /* You can adjust the width to your preference */
+  margin: 10px; 
+  
+}
+
+.card-text {
+  font-size: 18px; /* Adjust the font size of the card text as needed */
+}
+
+.card-title {
+  font-size: 20px; /* Adjust the font size of the card title as needed */
+}
+
