@@ -1,8 +1,13 @@
+import * as React from 'react'
+
+// 1. import `ChakraProvider` component
+import { ChakraProvider } from '@chakra-ui/react'
 
 function App() {
-
+  // 2. Wrap ChakraProvider at the root of your app
   return (
-    <div>
+    <ChakraProvider>
+<div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">
     <img src="/client/public/assets/DOUBLE R LOGO.png" alt="Roadside Racks Logo" height="30"/>
@@ -78,6 +83,7 @@ function App() {
       </div>
   </div>
   </div>
+    </ChakraProvider>
   )
 }
 
