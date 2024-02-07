@@ -31,9 +31,9 @@ function App() {
             Shop
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="shirts.html">Shirts</a>
-            <a class="dropdown-item" href="jackets.html">Jackets</a>
-            <a class="dropdown-item" href="bottoms.html">Bottomssssss</a>
+            <a class="dropdown-item" href="shirts.jsx">Shirts</a>
+            <a class="dropdown-item" href="jackets.jsx">Jackets</a>
+            <a class="dropdown-item" href="bottoms.jsx">Bottomssssss</a>
           </div>
         </li>
         <li class="nav-item">
