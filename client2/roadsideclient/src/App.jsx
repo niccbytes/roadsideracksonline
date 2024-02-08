@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { ChakraProvider, Box, Flex, Button, Input, InputGroup, InputRightElement, Stack } from '@chakra-ui/react'; // Import Chakra UI components
+import logo from './assets/images/DOUBLE R LOGO.png';
+import taz from './assets/images/taz.jpg';
+import btnsf from './assets/images/BTNF.jpg'
 
 function App() {
   return (
@@ -11,7 +14,7 @@ function App() {
           <Box bg="blue.500" p={4} color="white">
             <Flex maxW="container.xl" mx="auto" alignItems="center">
               <Box>
-                <img src="/client/public/assets/DOUBLE R LOGO.png" alt="Roadside Racks Logo" height="30" />
+              <img src={logo} alt="Roadside Racks Logo" height="30" />
               </Box>
               <Box ml={4}>
                 Roadside Racks
@@ -37,7 +40,7 @@ function App() {
           <Flex flexWrap="wrap" justifyContent="center" p={4} mt={4} flex="1">
             {/* Card 1 */}
             <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
-              <img src="/client/public/assets/BTNF.jpg" alt="The North Face Fleece" />
+            <img src={btnsf} alt="The North Face Fleece" />
               <Box p="6">
                 <Box d="flex" alignItems="baseline">
                   <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
@@ -53,7 +56,7 @@ function App() {
 
             {/* Card 2 */}
             <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
-              <img src="/client/public/assets/taz.jpg" alt="VTG Western Jacket" />
+            <img src={taz} alt="VTG Western Jacket" />
               <Box p="6">
                 <Box d="flex" alignItems="baseline">
                   <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
