@@ -1,8 +1,13 @@
 import * as React from 'react';
-import { ChakraProvider, Box, Flex, Button, Input, InputGroup, InputRightElement, Stack } from '@chakra-ui/react'; // Import Chakra UI components
+import { ChakraProvider, Box, Flex, Button, Input, InputGroup, InputRightElement, Stack } from '@chakra-ui/react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import About from './components/About'; // Adjust the path to where your About.jsx file is located
+import Shop from './components/Shop'; // Adjust the path to where your HomePage component is located
+import Events from './components/Events'; // Adjust the path to where your HomePage component is located
 import logo from './assets/images/DOUBLE R LOGO.png';
 import taz from './assets/images/taz.jpg';
 import btnsf from './assets/images/BTNF.jpg'
+
 
 function App() {
   return (
@@ -21,10 +26,21 @@ function App() {
               </Box>
               <Flex ml="auto" alignItems="center">
                 <Stack direction="row" spacing={4}>
-                  <Button variant="link" color="white">Home</Button>
-                  <Button variant="link" color="white">About</Button>
+                <ChakraLink as={RouterLink} to="/" color="white">
+                <Button variant="link">Home</Button>
+              </ChakraLink>
+              <ChakraLink as={RouterLink} to="/about" color="white">
+                <Button variant="link">About</Button>
+              </ChakraLink>
+              <ChakraLink as={RouterLink} to="/contact" color="white">
+                <Button variant="link">Contact</Button> 
+              </ChakraLink>
+              <ChakraLink as={RouterLink} to="/shop" color="white">
                   <Button variant="link" color="white">Shop</Button>
+                </ChakraLink>
+                <ChakraLink  as={RouterLink} to="/events" color="white">
                   <Button variant="link" color="white">Events</Button>
+                  </ChakraLink>
                 </Stack>
                 <InputGroup size="sm" ml={4}>
                   <Input placeholder="Search" />
