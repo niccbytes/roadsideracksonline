@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { ChakraProvider, Box, Flex, Button, Input, InputGroup, InputRightElement, Stack } from '@chakra-ui/react';
-import ChakraLink from '@chakra-ui/react';
+import { ChakraProvider, Box, Flex, Button, Input, InputGroup, InputRightElement, Stack, Link } from '@chakra-ui/react';
 import About from './components/About.jsx'; // Adjust the path to where your About.jsx file is located
 import Shop from './components/Shop.jsx'; // Adjust the path to where your HomePage component is located
 import Events from './components/Events.jsx'; // Adjust the path to where your HomePage component is located
@@ -26,21 +25,21 @@ function App() {
               </Box>
               <Flex ml="auto" alignItems="center">
                 <Stack direction="row" spacing={4}>
-                <ChakraLink as={RouterLink} to="/" color="white">
+                {/* <Link as={RouterLink} to="/" color="white">
                 <Button variant="link">Home</Button>
-              </ChakraLink>
-              <ChakraLink as={ About } to="/about" color="white">
+              </Link> */}
+              <Link as={ About } to="/about" color="white">
                 <Button variant="link">About</Button>
-              </ChakraLink>
-              <ChakraLink as={RouterLink} to="/contact" color="white">
+              </Link>
+              {/* <Link as={RouterLink} to="/contact" color="white">
                 <Button variant="link">Contact</Button> 
-              </ChakraLink>
-              <ChakraLink as={ Shop } to="/shop" color="white">
+              </Link> */}
+              <Link as={ Shop } to="/shop" color="white">
                   <Button variant="link" color="white">Shop</Button>
-                </ChakraLink>
-                <ChakraLink  as={ Events} to="/events" color="white">
+                </Link>
+                <Link  as={ Events} to="/events" color="white">
                   <Button variant="link" color="white">Events</Button>
-                  </ChakraLink>
+                  </Link>
                 </Stack>
                 <InputGroup size="sm" ml={4}>
                   <Input placeholder="Search" />
