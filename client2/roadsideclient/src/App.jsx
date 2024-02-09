@@ -9,20 +9,26 @@ import btnsf from './assets/images/BTNF.jpg'
 
 
 function App() {
+  const handleBuy = async () => {
+    try {
+      const response = await axios.post('/create-checkout-session');
+      const sessionId = response.data.id;
+      window.location.href = `https://checkout.stripe.com/pay/${sessionId}`; // Redirect to Stripe Checkout
+    } catch (error) {
+      console.error('Error creating checkout session:', error);
+    }
+  };
+
   return (
     <ChakraProvider>
-      {/* Ensure content takes up the entire viewport */}
       <Box minH="100vh" bg="gray.100">
         <Flex direction="column" minH="100%">
-          {/* Navbar */}
           <Box bg="blue.500" p={4} color="white">
             <Flex maxW="container.xl" mx="auto" alignItems="center">
               <Box>
-              <img src={logo} alt="Roadside Racks Logo" height="30" />
+                <img src={logo} alt="Roadside Racks Logo" height="30" />
               </Box>
-              <Box ml={4}>
-                Roadside Racks
-              </Box>
+              <Box ml={4}>Roadside Racks</Box>
               <Flex ml="auto" alignItems="center">
                 <Stack direction="row" spacing={4}>
                 {/* <Link as={RouterLink} to="/" color="white">
@@ -51,11 +57,9 @@ function App() {
             </Flex>
           </Box>
           
-          {/* Card Deck */}
           <Flex flexWrap="wrap" justifyContent="center" p={4} mt={4} flex="1">
-            {/* Card 1 */}
             <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
-            <img src={btnsf} alt="The North Face Fleece" />
+              <img src={btnsf} alt="The North Face Fleece" />
               <Box p="6">
                 <Box d="flex" alignItems="baseline">
                   <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
@@ -65,13 +69,12 @@ function App() {
                 <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
                   The North Face Fleece
                 </Box>
-                <Button mt="2" colorScheme="teal" onClick={() => window.location.href = 'checkout.html'}>Buy</Button>
+                <Button mt="2" colorScheme="teal" onClick={handleBuy}>Buy</Button>
               </Box>
             </Box>
 
-            {/* Card 2 */}
             <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
-            <img src={taz} alt="VTG Western Jacket" />
+              <img src={taz} alt="VTG Western Jacket" />
               <Box p="6">
                 <Box d="flex" alignItems="baseline">
                   <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
@@ -81,113 +84,7 @@ function App() {
                 <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
                   VTG Western Jacket
                 </Box>
-                <Button mt="2" colorScheme="teal" onClick={() => window.location.href = 'checkout.html'}>Buy</Button>
-              </Box>
-            </Box>
-
-            <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
-              <img src="/client/public/assets/taz.jpg" alt="VTG Western Jacket" />
-              <Box p="6">
-                <Box d="flex" alignItems="baseline">
-                  <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
-                    $100
-                  </Box>
-                </Box>
-                <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
-                  VTG Western Jacket
-                </Box>
-                <Button mt="2" colorScheme="teal" onClick={() => window.location.href = 'checkout.html'}>Buy</Button>
-              </Box>
-            </Box>
-
-            <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
-              <img src="/client/public/assets/taz.jpg" alt="VTG Western Jacket" />
-              <Box p="6">
-                <Box d="flex" alignItems="baseline">
-                  <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
-                    $100
-                  </Box>
-                </Box>
-                <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
-                  VTG Western Jacket
-                </Box>
-                <Button mt="2" colorScheme="teal" onClick={() => window.location.href = 'checkout.html'}>Buy</Button>
-              </Box>
-            </Box>
-
-
-            <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
-              <img src="/client/public/assets/taz.jpg" alt="VTG Western Jacket" />
-              <Box p="6">
-                <Box d="flex" alignItems="baseline">
-                  <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
-                    $100
-                  </Box>
-                </Box>
-                <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
-                  VTG Western Jacket
-                </Box>
-                <Button mt="2" colorScheme="teal" onClick={() => window.location.href = 'checkout.html'}>Buy</Button>
-              </Box>
-            </Box>
-
-            <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
-              <img src="/client/public/assets/taz.jpg" alt="VTG Western Jacket" />
-              <Box p="6">
-                <Box d="flex" alignItems="baseline">
-                  <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
-                    $100
-                  </Box>
-                </Box>
-                <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
-                  VTG Western Jacket
-                </Box>
-                <Button mt="2" colorScheme="teal" onClick={() => window.location.href = 'checkout.html'}>Buy</Button>
-              </Box>
-            </Box>
-
-            <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
-              <img src="/client/public/assets/taz.jpg" alt="VTG Western Jacket" />
-              <Box p="6">
-                <Box d="flex" alignItems="baseline">
-                  <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
-                    $100
-                  </Box>
-                </Box>
-                <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
-                  VTG Western Jacket
-                </Box>
-                <Button mt="2" colorScheme="teal" onClick={() => window.location.href = 'checkout.html'}>Buy</Button>
-              </Box>
-            </Box>
-
-            <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
-              <img src="/client/public/assets/taz.jpg" alt="VTG Western Jacket" />
-              <Box p="6">
-                <Box d="flex" alignItems="baseline">
-                  <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
-                    $100
-                  </Box>
-                </Box>
-                <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
-                  VTG Western Jacket
-                </Box>
-                <Button mt="2" colorScheme="teal" onClick={() => window.location.href = 'checkout.html'}>Buy</Button>
-              </Box>
-            </Box>
-
-            <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
-              <img src="/client/public/assets/taz.jpg" alt="VTG Western Jacket" />
-              <Box p="6">
-                <Box d="flex" alignItems="baseline">
-                  <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
-                    $100
-                  </Box>
-                </Box>
-                <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
-                  VTG Western Jacket
-                </Box>
-                <Button mt="2" colorScheme="teal" onClick={() => window.location.href = 'checkout.html'}>Buy</Button>
+                <Button mt="2" colorScheme="teal" onClick={handleBuy}>Buy</Button>
               </Box>
             </Box>
 
