@@ -25,12 +25,21 @@ const typeDefs = `
   type Query {
     me: User
   }
+  
+  input CheckoutInput {
+    seshion: ID
+  }
+
+  type CheckoutSession {
+    sessionId: String!
+  }
 
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     saveItem(shopData: shopInput!): User
     removeItem(shopId: ID!): User
+    initiateCheckout(input: CheckoutInput!): CheckoutSession
   }
 `;
 
