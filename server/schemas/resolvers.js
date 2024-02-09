@@ -1,5 +1,8 @@
 const { User } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
+const { loadStripe } = require('@stripe/stripe-js');
+
+const stripe = loadStripe('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');
 
 const resolvers = {
   Query: {
@@ -61,8 +64,24 @@ const resolvers = {
         return updatedUser;
       }
 
+
       throw AuthenticationError;
     },
+    initiateCheckout: async (_, { input }) => {
+      try {
+        // Call Stripe API to create a Checkout Session
+        const session = await stripe.checkout.sessions.create({
+          // Pass necessary parameters like items, quantity, etc.
+        });
+
+        return {
+          sessionId: session.id
+        };
+      } catch (error) {
+        throw new Error('Error initiating checkout');
+      }
+    }
+  
   },
 };
 
