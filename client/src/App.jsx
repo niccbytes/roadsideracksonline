@@ -40,46 +40,6 @@ function App() {
   return (
     <ApolloProvider client={client}>
 
-      <ChakraProvider>
-        <Box minH="100vh" bg="gray.100">
-          <Flex direction="column" minH="100%">
-            <Box bg="blue.500" p={4} color="white">
-              <Flex maxW="container.xl" mx="auto" alignItems="center">
-                <Box>
-                  <img src={logo} alt="Roadside Racks Logo" height="30" />
-                </Box>
-                <Box ml={4}>Roadside Racks</Box>
-                <Flex ml="auto" alignItems="center">
-                  <Stack direction="row" spacing={4}>
-                    <Link as={ About } to="/about" color="white">
-                      <Button variant="link">About</Button>
-                    </Link>
-                    <Link as={ Shop } to="/shop" color="white">
-                      <Button variant="link" color="white">Shop</Button>
-                    </Link>
-                    <Link as={ Events} to="/events" color="white">
-                      <Button variant="link" color="white">Events</Button>
-                    </Link>
-                  </Stack>
-                  <InputGroup size="sm" ml={4}>
-                    <Input placeholder="Search" />
-                    <InputRightElement>
-                      <Button colorScheme="blue" size="sm">Search</Button>
-                    </InputRightElement>
-                  </InputGroup>
-                </Flex>
-              </Flex>
-            </Box>
-            
-            <Flex flexWrap="wrap" justifyContent="center" p={4} mt={4} flex="1">
-              <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
-                <img src={btnsf} alt="The North Face Fleece" />
-                <Box p="6">
-                  <Box d="flex" alignItems="baseline">
-                    <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
-                      $20
-                    </Box>
-
     <ChakraProvider>
       <Box minH="100vh" bg="gray.100">
         <Flex direction="column" minH="100%">
