@@ -39,6 +39,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+
       <ChakraProvider>
         <Box minH="100vh" bg="gray.100">
           <Flex direction="column" minH="100%">
@@ -78,6 +79,51 @@ function App() {
                     <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
                       $20
                     </Box>
+
+    <ChakraProvider>
+      <Box minH="100vh" bg="gray.100">
+        <Flex direction="column" minH="100%">
+          <Box bg="orange.200" p={4} color="white">
+            <Flex maxW="container.xl" mx="auto" alignItems="center">
+
+              <Box className= "navlogo" ml={4}>Roadside Racks</Box>
+              <Flex ml="auto" alignItems="center">
+                <Stack direction="row" spacing={4}>
+                {/* <Link as={RouterLink} to="/" color="white">
+                <Button variant="link">Home</Button>
+              </Link> */}
+              <Link as={ About } to="/about" color="white">
+                <Button variant="link">About</Button>
+              </Link>
+              {/* <Link as={RouterLink} to="/contact" color="white">
+                <Button variant="link">Contact</Button> 
+              </Link> */}
+              <Link as={ Shop } to="/shop" color="white">
+                  <Button variant="link" color="white">Shop</Button>
+                </Link>
+                <Link  as={ Events} to="/events" color="white">
+                  <Button variant="link" color="white">Events</Button>
+                  </Link>
+                </Stack>
+                <InputGroup size="sm" ml={4}>
+                  <Input placeholder="Search" />
+                  <InputRightElement>
+                    <Button colorScheme="gray" size="sm">Search</Button>
+                  </InputRightElement>
+                </InputGroup>
+              </Flex>
+            </Flex>
+          </Box>
+          <Shop />
+          <Flex flexWrap="wrap" justifyContent="center" p={4} mt={4} flex="1">
+            
+            <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
+              <img src={btnsf} alt="The North Face Fleece" />
+              <Box p="6">
+                <Box d="flex" alignItems="baseline">
+                  <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase">
+                    $20
+
                   </Box>
                   <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
                     The North Face Fleece
@@ -101,11 +147,31 @@ function App() {
                 </Box>
               </Box>
 
-              {/* Repeat this pattern for other cards */}
+
+            </Box>
             </Flex>
-          </Flex>
-        </Box>
-      </ChakraProvider>
+            
+            <box className="about">
+              <About />
+              <p> We are a vintage clothing business Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae!</p>
+            </box>
+
+            <box className="events">
+              <Events />
+              <p>
+                Our future events are: 
+                - 10/10/2024: Vintage Clothing Pop-Up Shop
+                - 10/15/2024: Vintage Clothing Fashion Show
+                - 10/20/2024: Vintage Clothing Auction
+              </p>
+            </box>
+
+            {/* Repeat this pattern for other cards */}
+          
+        </Flex>
+      </Box>
+    </ChakraProvider>
+
     </ApolloProvider>
   );
 }
