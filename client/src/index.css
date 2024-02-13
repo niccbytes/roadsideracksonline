@@ -77,6 +77,18 @@ button:focus-visible {
   font-size: 1.5em;
 }
 
+.search {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  box-sizing:border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #242424;
+  color: white;
+}
+
 .about {
   font-size: 1.5em;
   margin: 0 auto;
@@ -84,7 +96,14 @@ button:focus-visible {
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-weight: 700;
   font-size: 1.5em;
-  padding: 150px;
+  padding: 25px;
+}
+
+.abttxt {
+  padding-top: 50px;
+  padding-left: 300px;
+  padding-right: 300px;
+  text-align: center;
 }
 
 .events {
@@ -94,5 +113,30 @@ button:focus-visible {
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-weight: 700;
   font-size: 1.5em;
-  padding: 150px;
+  padding: 125px;
+}
+
+.eventtxt{
+  padding-top: 50px;
+  padding-left: 300px;
+  padding-right: 300px;
+  text-align: center;
+}
+
+.logo {
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  display: block;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  padding-left: 15px;
+}
+
+.eventimg {
+  border-radius: 5px;
+  width: 750px;
+  height: 450px;
+  margin: 0 auto;
 }
