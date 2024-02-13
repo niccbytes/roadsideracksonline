@@ -6,6 +6,7 @@ import Events from './components/Events.jsx'; // Adjust the path to where your H
 import logo from './assets/images/DOUBLE R LOGO.png';
 import taz from './assets/images/taz.jpg';
 import btnsf from './assets/images/BTNF.jpg'
+import van from './assets/images/van.jpg';
 import Checkout from './components/Checkout.jsx';
 import StripeButton from './components/StripeButton.jsx';
 
@@ -52,30 +53,30 @@ function App() {
                 {/* <Link as={RouterLink} to="/" color="white">
                 <Button variant="link">Home</Button>
               </Link> */}
-              <Link as={ About } to="/about" color="white">
+              <Link href="#about-section" color="white" p={2} _hover={{ textDecoration: 'none' }}>
                 <Button variant="link">About</Button>
               </Link>
               {/* <Link as={RouterLink} to="/contact" color="white">
                 <Button variant="link">Contact</Button> 
               </Link> */}
-              <Link as={ Shop } to="/shop" color="white">
-                  <Button variant="link" color="white">Shop</Button>
+              <Link href="#shop-section" color="white" p={2} _hover={{ textDecoration: 'none' }}>
+                <Button variant="link">Shop</Button>
+              </Link>
+                <Link href="#events-section" color="white" p={2} _hover={{ textDecoration: 'none' }}>
+                  <Button variant="link">Events</Button>
                 </Link>
-                <Link  as={ Events} to="/events" color="white">
-                  <Button variant="link" color="white">Events</Button>
-                  </Link>
                 </Stack>
                 <InputGroup size="sm" ml={4}>
                   <Input placeholder="Search" />
                   <InputRightElement>
-                    <Button colorScheme="gray" size="sm">Search</Button>
+                    <Button className="search" colorScheme="gray" size="sm"></Button>
                   </InputRightElement>
                 </InputGroup>
               </Flex>
             </Flex>
           </Box>
           <Shop />
-          <Flex flexWrap="wrap" justifyContent="center" p={4} mt={4} flex="1">
+          <Flex flexWrap="wrap" justifyContent="center" p={4} mt={4} flex="1" id="shop-section">
             
             <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
               <img src={btnsf} alt="The North Face Fleece" />
@@ -111,23 +112,23 @@ function App() {
             </Box>
             </Flex>
             
-            <box className="about">
+            <box className="about" p={4} mt={4} id="about-section">
+              
               <About />
-              <p> We are a vintage clothing business Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae!</p>
+              <img className="logo" src={logo} alt="Roadside Racks Logo" />
+              <p className="abttxt"> We are a vintage clothing business Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae!</p>
             </box>
 
-            <box className="events">
+            <box className="events" p={4} mt={4} id="events-section">
               <Events />
-              <p>
+              <img className="eventimg" src={van} ></img>
+              <ul className="eventtxt">
                 Our future events are: 
-                - 10/10/2024: Vintage Clothing Pop-Up Shop
-                - 10/15/2024: Vintage Clothing Fashion Show
-                - 10/20/2024: Vintage Clothing Auction
-              </p>
+                <li> - 10/10/2024: Vintage Clothing Pop-Up Shop</li>
+                <li> - 10/15/2024: Vintage Clothing Fashion Show </li>
+                <li> - 10/20/2024: Vintage Clothing Auction </li>
+              </ul>
             </box>
-
-            {/* Repeat this pattern for other cards */}
-          
         </Flex>
       </Box>
     </ChakraProvider>
