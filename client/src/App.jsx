@@ -58,12 +58,10 @@ function App() {
     <ChakraProvider>
       <Box minH="100vh" bg="gray.100">
         <Flex direction="column" minH="100%">
-          <Box bg="blue.500" p={4} color="white">
+          <Box bg="orange.200" p={4} color="white">
             <Flex maxW="container.xl" mx="auto" alignItems="center">
-              <Box>
-                <img src={logo} alt="Roadside Racks Logo" height="30" />
-              </Box>
-              <Box ml={4}>Roadside Racks</Box>
+
+              <Box className= "navlogo" ml={4}>Roadside Racks</Box>
               <Flex ml="auto" alignItems="center">
                 <Stack direction="row" spacing={4}>
                 {/* <Link as={RouterLink} to="/" color="white">
@@ -85,15 +83,15 @@ function App() {
                 <InputGroup size="sm" ml={4}>
                   <Input placeholder="Search" />
                   <InputRightElement>
-                    <Button colorScheme="blue" size="sm">Search</Button>
+                    <Button colorScheme="gray" size="sm">Search</Button>
                   </InputRightElement>
                 </InputGroup>
               </Flex>
             </Flex>
           </Box>
-          
+          <Shop />
           <Flex flexWrap="wrap" justifyContent="center" p={4} mt={4} flex="1">
-            <Shop />
+            
             <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
               <img src={btnsf} alt="The North Face Fleece" />
               <Box p="6">
@@ -123,13 +121,14 @@ function App() {
                 <Checkout onClick={handleBuy}/>
               </Box>
             </Box>
-
-            <box>
+            </Flex>
+            
+            <box className="about">
               <About />
               <p> We are a vintage clothing business Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae!</p>
             </box>
 
-            <box>
+            <box className="events">
               <Events />
               <p>
                 Our future events are: 
@@ -140,7 +139,7 @@ function App() {
             </box>
 
             {/* Repeat this pattern for other cards */}
-          </Flex>
+          
         </Flex>
       </Box>
     </ChakraProvider>
