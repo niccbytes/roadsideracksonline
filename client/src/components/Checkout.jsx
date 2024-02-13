@@ -25,8 +25,8 @@ const Checkout = () => {
     }
   };
   return (
-    <div>Checkout
-      <button onClick={handleBuy}>CLICK</button>
+    <div>
+      <button onClick={handleBuy}>Add to cart</button>
     </div>
   )
 }
