@@ -93,6 +93,7 @@ function App() {
           </Box>
           
           <Flex flexWrap="wrap" justifyContent="center" p={4} mt={4} flex="1">
+            <Shop />
             <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={4}>
               <img src={btnsf} alt="The North Face Fleece" />
               <Box p="6">
@@ -122,6 +123,21 @@ function App() {
                 <Checkout onClick={handleBuy}/>
               </Box>
             </Box>
+
+            <box>
+              <About />
+              <p> We are a vintage clothing business Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque doloribus, fuga sunt itaque iure reiciendis est consequuntur culpa odit dolore voluptatum odio iusto ratione nobis maiores sequi id! Molestiae!</p>
+            </box>
+
+            <box>
+              <Events />
+              <p>
+                Our future events are: 
+                - 10/10/2024: Vintage Clothing Pop-Up Shop
+                - 10/15/2024: Vintage Clothing Fashion Show
+                - 10/20/2024: Vintage Clothing Auction
+              </p>
+            </box>
 
             {/* Repeat this pattern for other cards */}
           </Flex>
