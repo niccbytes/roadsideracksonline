@@ -1,6 +1,6 @@
 # Roadside Racks - MERN Ecommerce Storefront
 
-Welcome to Roadside Racks, a MERN (MongoDB, Express.js, React.js, Node.js) based eCommerce storefront application. Roadside Racks is designed to provide a seamless shopping experience for users interested in purchasing automotive accessories and parts.
+Welcome to Roadside Racks, a MERN (MongoDB, Express.js, React.js, Node.js) based eCommerce storefront application. Roadside Racks is designed to provide a seamless shopping experience for users interested in purchasing vintage clothing.
 
 ## Features
 
